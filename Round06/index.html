@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件修饰符</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- vue cdn -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+	<div id="vue-app">
+		<p>阻止冒泡事件</p>
+		<div id="canves" v-on:mousemove="getOffsetXY">
+			<span v-on:mousemove='stopPropagation'>js 方式</span>--{{x}},{{y}}--<span v-on:mousemove.stop="">vue方式</span>
+			<a :href="website" target="_blank" v-on:click.stop.prevent="">事件修饰符连用</a>
+		</div>
+		<p>阻止默认事件</p>
+		<p>a标签的默认事件是，跳转到href指定的路径</p>
+		<a :href="website" target="_blank" v-on:click='alertJs'>gitHub</a>
+		<a :href="website" target="_blank" v-on:click.prevent='alert'>gitHub</a>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
