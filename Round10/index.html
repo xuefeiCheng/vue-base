@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>class与style的绑定</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+	<div id="vue-app">
+		<h2>示例1</h2>
+		<!-- v-bind:class='{css部分类名:js部分属性值(true/false)}' -->
+		<!-- <div class='noselect' v-bind:class='{changeColor,changeColor}' v-on:click='changeColor = !changeColor'>
+			<span>herry</span>
+		</div> -->
+		<h2>示例2</h2>
+		<button v-on:click='changeColor = !changeColor'>change color</button>
+		<button v-on:click='changeLength = !changeLength'>change length</button>
+		<hr>
+		<div v-bind:class='compareClasses'>
+			<span>herry</span>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>

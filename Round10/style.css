@@ -1,0 +1,26 @@
+.noselect {
+-webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none; /* Chrome/Safari/Opera */
+-khtml-user-select: none; /* Konqueror */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+div span{
+	display: inline-block;
+	padding: 10px;
+	height: 30px;
+	background-color: #ccc;
+	text-align: center;
+	line-height: 30px;
+	cursor: pointer;
+	/*user-select:none;*/
+}
+.changeColor span{
+	background-color: green;
+	color: #fff;
+}
+.changeLength span:before{
+	content:"长度更改啦！";
+	padding-right: 5px;
+}
