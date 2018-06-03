@@ -1,21 +1,21 @@
-<!-- 说明：初始项目，新创建组件haha -->
-
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-    <HAHA/>
+    <app-header/>
+    <users/>
+    <app-footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import HAHA from './components/haha'
-
+import users from './components/users'
+import Header from './components/header'
+import Footer from './components/footer'
 export default {
   name: 'App',
   components: {
-    HelloWorld,HAHA
+  'users':users,
+    'app-header':Header,
+    'app-footer':Footer
   }
 }
 </script>
@@ -27,6 +27,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding:0;
+  margin:0;
+ // margin-top: 60px;
 }
+ul,li{list-style:none;}
 </style>
