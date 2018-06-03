@@ -23,4 +23,9 @@ css data等信息
 定义三个组件：app-header app-footer users
 其中users中实现自适应样式，使用flex
 
+【组件之间传值】
+··【父组件向子组件传值】：props
+··【子组件向父组件传值】：事件传值
+··【说明】传值（string boolean number）传引用（object array）--公用一块内存空间
+
 
