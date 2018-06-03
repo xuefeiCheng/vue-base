@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-if</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+	<div id="vue-app">
+		<button @click='error = !error'>toggle Error</button>
+		<button v-on:click='success = !success'>toggle Success</button>
+		<p v-if='error'>网络连接错误</p>
+		<p v-else-if='success'>网络正常</p>
+		<p v-show='error'>网络连接错误 404</p>
+		<p v-show='success'>网络通畅 200</p>
+		<!-- v-if与v-show区别 -->
+		<!-- v-show是本身先创建节点，在dom中占据位置的，使用display动态隐藏展示 -->
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
