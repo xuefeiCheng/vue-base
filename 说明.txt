@@ -38,4 +38,7 @@ npm install vue-resource --save-dev
 
 http://jsonplaceholder.typicode.com/[网络测试接口api，在线]
 
+【跨域 fetch axios】
+设置 配置文件中的proxyTable
+
 
