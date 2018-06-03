@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-header v-bind:msg1='msg'/>
+    <app-header v-on:parent='update($event)' v-bind:msg1='msg'/>
     <!-- 父组件向子组件传值-->
     <users v-bind:users1="users"></users>
     <usersB v-bind:users="users"></usersB>
@@ -26,6 +26,11 @@ export default {
       ],
       msg:'你好，传递值'
   }
+  },
+  methods:{
+    update:function(msg){
+      this.msg = msg;
+    }
   },
   components: {
   'users':users,

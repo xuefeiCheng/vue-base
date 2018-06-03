@@ -17,7 +17,7 @@
 
 
 export default {
-  name: 'users',
+  name: 'usersB',
   //子组件 接收值 使用props 要注意：父组件传递名称与子组件使用名称对应 users
   //props:["users"],
   props:{
