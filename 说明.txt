@@ -41,4 +41,14 @@ http://jsonplaceholder.typicode.com/[网络测试接口api，在线]
 【跨域 fetch axios】
 设置 配置文件中的proxyTable
 
+axios插件，首先 安装
+cnpm install axios
+在mainjs中调用
+为了使其能够全局使用$axios，类似jquery能够使用＄,需要声明一下
+Vue.prototype.$axios = axios
+同时 需要设置 默认的参数
+例如：
+axios.defaults.headers.common['token'] = 'f4c902c9ae5a2a9d8f84868ad064e706'
+axios.defaults.headers.post['Content-type'] = 'application/json'
+
 

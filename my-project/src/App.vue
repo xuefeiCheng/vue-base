@@ -15,20 +15,28 @@ export default {
   return {}
   },
   created:function(){
-    fetch("/api/test/testToken.php",{
-       method:"post",
-       headers:{
-         "Content-type":"application/json",
-         token:"f4c902c9ae5a2a9d8f84868ad064e706"
-       },
-       body:JSON.stringify({username:"henry",password:"321321"})
-     })
-     .then(result => {
+
+  //fetch
+  //  fetch("/api/test/testToken.php",{
+  //     method:"post",
+  //     headers:{
+  //       "Content-type":"application/json",
+  //       token:"f4c902c9ae5a2a9d8f84868ad064e706"
+  //     },
+  //     body:JSON.stringify({username:"henry",password:"321321"})
+  //   })
+  //   .then(result => {
        // console.log(result)
-       return result.json()
-     })
-     .then(data => {
-       console.log(data)
+  //     return result.json()
+  //   })
+  //   .then(data => {
+  //     console.log(data)
+  //   })
+
+     //axios
+     this.$axios.post("/api/test/testToken.php",{username:"henry",password:"321321"})
+     .then(function(data){
+      console.log(data.data)
      })
   }
 }
