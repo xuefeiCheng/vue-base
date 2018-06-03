@@ -1,7 +1,7 @@
 <template>
 <div class='users'>
 <ul>
-<li v-for='user in users1' v-on:click='user.show = !user.show'>
+<li v-for='user in users1'>
 <h2>{{user.name}}</h2>
 <p>{{user.email}}</p></li>
 </ul>
