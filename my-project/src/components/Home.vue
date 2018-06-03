@@ -15,15 +15,15 @@ import Footer from './footer'
 export default {
   name: 'Home',
   data(){
-  return {
-  users:[
-{name:"xuefeicheng",position:"web",show:false},
-{name:"xuefeicheng",position:"web",show:false},
-{name:"xuefeicheng",position:"web",show:false},
-{name:"xuefeicheng",position:"web",show:false},
-{name:"xuefeicheng",position:"web",show:false}
-      ]
-  }
+  	return {
+  		users:[]
+  	}
+  },
+  created:function(){
+  	this.$http.get("http://jsonplaceholder.typicode.com/users")
+  	.then(function(data){
+  		this.users = data.body;
+  	})
   },
   components: {
   'users':users,

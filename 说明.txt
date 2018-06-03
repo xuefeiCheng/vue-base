@@ -32,3 +32,10 @@ npm install vue-router --save-dev
 3：在入口组件中，使用router-view
 4：链接使用 router-link
 
+[安装 vue-resource vue自带的http服务]
+npm install vue-resource --save-dev
+在当前项目下，安装resource
+
+http://jsonplaceholder.typicode.com/[网络测试接口api，在线]
+
+
