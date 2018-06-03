@@ -1,12 +1,13 @@
 <template>
   <footer>
-    <p>{{msg}}</p>
+    <p>{{msg}}--{{title}}</p>
   </footer>
 </template>
 
 <script>
 export default {
   name: 'app-footer',
+  props:['title'],
   data () {
     return {
       msg: 'this is footer'

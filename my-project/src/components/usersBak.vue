@@ -1,8 +1,9 @@
 <template>
-<div class='users'>
-<button v-on:click='changeA'>变更传递的array</button>
+<div class='usersBak'>
+<p>测试，传递的是数组/对象（引用）</p>
+<hr>
 <ul>
-<li v-for='user in users1' v-on:click='user.show = !user.show'>
+<li v-for='user in users' v-on:click='user.show = !user.show'>
 <h2>{{user.name}}</h2>
 <p v-show='user.show'>{{user.position}}</p></li>
 </ul>
@@ -17,10 +18,10 @@
 
 export default {
   name: 'users',
-  //子组件 接收值 使用props 要注意：父组件传递名称与子组件使用名称对应 users1
-  //props:["users1"],
+  //子组件 接收值 使用props 要注意：父组件传递名称与子组件使用名称对应 users
+  //props:["users"],
   props:{
-    users1:{
+    users:{
       type:Array,
       required:true
       }
@@ -29,12 +30,7 @@ export default {
     return {
       
     }
-  },
-methods:{
-changeA:function(){
-this.users1.pop();
   }
-}
 }
 </script>
 

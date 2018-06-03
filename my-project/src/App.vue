@@ -1,14 +1,16 @@
 <template>
   <div id="app">
-    <app-header/>
+    <app-header v-bind:msg1='msg'/>
     <!-- 父组件向子组件传值-->
     <users v-bind:users1="users"></users>
-    <app-footer/>
+    <usersB v-bind:users="users"></usersB>
+    <app-footer v-bind:title='msg'/>
   </div>
 </template>
 
 <script>
 import users from './components/users'
+import usersB from './components/usersBak'
 import Header from './components/header'
 import Footer from './components/footer'
 export default {
@@ -21,11 +23,13 @@ export default {
 {name:"xuefeicheng",position:"web",show:false},
 {name:"xuefeicheng",position:"web",show:false},
 {name:"xuefeicheng",position:"web",show:false}
-      ]
+      ],
+      msg:'你好，传递值'
   }
   },
   components: {
   'users':users,
+  'usersB':usersB,
     'app-header':Header,
     'app-footer':Footer
   }
