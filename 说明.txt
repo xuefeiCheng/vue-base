@@ -23,4 +23,12 @@ css data等信息
 定义三个组件：app-header app-footer users
 其中users中实现自适应样式，使用flex
 
+[安装路由]
+npm install vue-router --save-dev
+在当前项目下，安装路由
+
+1: 在mainjs中导入路由，配置路由参数
+2：导入需要的组件
+3：在入口组件中，使用router-view
+4：链接使用 router-link
 

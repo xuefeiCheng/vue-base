@@ -1,33 +1,18 @@
 <template>
   <div id="app">
-    <app-header/>
-    <!-- 父组件向子组件传值-->
-    <users v-bind:users1="users"></users>
-    <app-footer/>
+  <ul>
+  <li><router-link to='/'>Home</router-link></li>
+  <li><router-link to='/HelloWorld'>Hello</router-link></li>
+  </ul>
+  <router-view></router-view>
   </div>
 </template>
 
 <script>
-import users from './components/users'
-import Header from './components/header'
-import Footer from './components/footer'
 export default {
   name: 'App',
   data(){
-  return {
-  users:[
-{name:"xuefeicheng",position:"web",show:false},
-{name:"xuefeicheng",position:"web",show:false},
-{name:"xuefeicheng",position:"web",show:false},
-{name:"xuefeicheng",position:"web",show:false},
-{name:"xuefeicheng",position:"web",show:false}
-      ]
-  }
-  },
-  components: {
-  'users':users,
-    'app-header':Header,
-    'app-footer':Footer
+  return {}
   }
 }
 </script>
