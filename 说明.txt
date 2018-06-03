@@ -19,4 +19,8 @@ https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/cli.md
 3：在app.vue中含有两个组件 helloworld 和 haha ，查看控制台，可以发现使用hash标识，区分
 css data等信息
 
+【组件嵌套demo】
+定义三个组件：app-header app-footer users
+其中users中实现自适应样式，使用flex
+
 
