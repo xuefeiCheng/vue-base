@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>键盘事件</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- vue cdn -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+	<div id="vue-app">
+		<p>键盘事件：响应用户键盘相关事件，需要有用户输入入口，例如input</p>
+		<label>姓名：</label><input type="text" v-on:keyup.enter='logName'>
+		<!-- 事件修饰符 连用 -->
+		<label>年龄：</label><input type="text" v-on:keyup.alt.enter='logAge'>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
