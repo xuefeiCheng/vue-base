@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <app-header/>
-    <users/>
+    <!-- 父组件向子组件传值-->
+    <users v-bind:users1="users"></users>
     <app-footer/>
   </div>
 </template>
@@ -12,6 +13,17 @@ import Header from './components/header'
 import Footer from './components/footer'
 export default {
   name: 'App',
+  data(){
+  return {
+  users:[
+{name:"xuefeicheng",position:"web",show:false},
+{name:"xuefeicheng",position:"web",show:false},
+{name:"xuefeicheng",position:"web",show:false},
+{name:"xuefeicheng",position:"web",show:false},
+{name:"xuefeicheng",position:"web",show:false}
+      ]
+  }
+  },
   components: {
   'users':users,
     'app-header':Header,
