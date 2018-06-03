@@ -1,0 +1,22 @@
+安装vue-cli 全局安装 npm install --global vue-cli
+检测是否安装成功 vue -version
+构建一个基于vue-cli的项目
+vue init webpack project（free-name）[一系列的配置信息，可以一直默认]
+安装完成 进入项目目录 cd project
+安装一下（依赖文件） npm install
+运行 npm run dev（开发版本）
+搭建vue-cli  脚手架
+
+查阅官方文档 安装，版本在升级，安装方式变更
+https://github.com/vuejs/vue-docs-zh-cn/blob/master/vue-cli/cli.md
+
+清空cmd  cls+enter
+
+安装完毕，更改项目
+【入门】
+1：新建一个组件 haha 
+2：引入，在app.vue组件中调用
+3：在app.vue中含有两个组件 helloworld 和 haha ，查看控制台，可以发现使用hash标识，区分
+css data等信息
+
+
